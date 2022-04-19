@@ -42,4 +42,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Role::class);
     }
+
+    public function plateForms()
+    {
+        return $this->belongsToMany(PlateForm::class, 'user_plate_forms');
+    }
 }
