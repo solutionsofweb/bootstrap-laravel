@@ -14,7 +14,8 @@ class PlateFormController extends Controller
      */
     public function index()
     {
-        //
+        $plateForms = PlateForm::select('icon')->get()->toJson(JSON_PRETTY_PRINT);
+        return $plateForms;
     }
 
     /**
